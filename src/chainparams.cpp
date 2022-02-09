@@ -187,12 +187,7 @@ public:
 	vSeeds.emplace_back("216.158.228.212", false);	    
         vSeeds.emplace_back("seed1.satonetwork.com", false);
         vSeeds.emplace_back("seed2.satonetwork.com", false);
-        vSeeds.emplace_back("seed3.satonetwork.com", false);        
-	vSeeds.emplace_back("188.34.196.154", false);
-        vSeeds.emplace_back("60.119.139.94", false);
-        vSeeds.emplace_back("217.227.150.112", false);
-        vSeeds.emplace_back("86.127.106.0", false);
-        vSeeds.emplace_back("190.2.133.225", false);
+        vSeeds.emplace_back("seed3.satonetwork.com", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
