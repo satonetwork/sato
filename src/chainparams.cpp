@@ -181,9 +181,10 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x00000018419cc48e14c5a8909e0599d4d7189439ae5a16cffb31df833f2ee0b2"));
         assert(genesis.hashMerkleRoot == uint256S("0x0b22541da6ad305c4b575f99aedff3d94a049c97bbbaabc278cfa0f9e11e8488"));
 
-        vSeeds.emplace_back("173.249.40.91", false);
-	vSeeds.emplace_back("65.21.253.196", false);
-	vSeeds.emplace_back("161.97.177.107", false);
+        vSeeds.emplace_back("67.211.212.45", false);
+	vSeeds.emplace_back("67.211.212.43", false);
+	vSeeds.emplace_back("66.45.245.123", false);
+	vSeeds.emplace_back("216.158.228.212", false);	    
         vSeeds.emplace_back("seed1.satonetwork.com", false);
         vSeeds.emplace_back("seed2.satonetwork.com", false);
         vSeeds.emplace_back("seed3.satonetwork.com", false);        
