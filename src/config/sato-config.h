@@ -21,11 +21,8 @@
 #define CLIENT_VERSION_MINOR 1
 
 /* Build revision */
-<<<<<<< HEAD
-#define CLIENT_VERSION_REVISION 5
-=======
-#define CLIENT_VERSION_REVISION 3
->>>>>>> d18b0b16c011b1971e40fd66496da76cb73a791b
+
+#define CLIENT_VERSION_REVISION 6
 
 /* Copyright holder(s) before %s replacement */
 #define COPYRIGHT_HOLDERS "The %s developers"
