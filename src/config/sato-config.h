@@ -351,11 +351,8 @@
 #define PACKAGE_NAME "Sato Core"
 
 /* Define to the full name and version of this package. */
-<<<<<<< HEAD
-#define PACKAGE_STRING "Sato Core 1.1.5"
-=======
-#define PACKAGE_STRING "Sato Core 1.1.5"
->>>>>>> d18b0b16c011b1971e40fd66496da76cb73a791b
+
+#define PACKAGE_STRING "Sato Core 1.1.6"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "sato"
@@ -364,11 +361,8 @@
 #define PACKAGE_URL "https://satonetwork.com"
 
 /* Define to the version of this package. */
-<<<<<<< HEAD
-#define PACKAGE_VERSION "1.1.5"
-=======
-#define PACKAGE_VERSION "1.1.5"
->>>>>>> d18b0b16c011b1971e40fd66496da76cb73a791b
+
+#define PACKAGE_VERSION "1.1.6"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
