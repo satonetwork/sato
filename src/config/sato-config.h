@@ -345,7 +345,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/Satoex/Sato/issues"
+#define PACKAGE_BUGREPORT "https://github.com/satonetwork/sato/issues"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "Sato Core"
