@@ -130,7 +130,7 @@ You can now start raven-qt from the build directory.
 
 `sato/qt/sato-qt`
 
-ravend and raven-cli are in `sato/`
+satod and sato-cli are in `sato/`
 
 
 __Optional:__
