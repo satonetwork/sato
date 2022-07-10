@@ -107,7 +107,7 @@ __Download SATO source.__
 
 `cd sato`
 
-`git checkout develop` # this checks out the develop branch.
+`git checkout master` # this checks out the master branch.
 
 __Download and build Berkeley DB 4.8__
 
