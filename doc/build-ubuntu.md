@@ -91,7 +91,7 @@ Directory structure
 ------------------
 SATO sources in `$HOME/sato`
 
-Berkeley DB will be installed to `$HOME/src/db4`
+Berkeley DB will be installed to `$HOME/sato/db4`
 
 
 SATO
