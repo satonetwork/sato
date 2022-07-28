@@ -157,10 +157,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nOverrideMinerConfirmationWindow = 2000;
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000001000100"); // Block 0
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000003ec7f2b8c2b609"); // Block 716264
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x00000018419cc48e14c5a8909e0599d4d7189439ae5a16cffb31df833f2ee0b2"); // Block 0
+        consensus.defaultAssumeValid = uint256S("0x000000004b6f6feccb5e1955b378f976d223eba872f03c18c27faa3b62d6c37d"); // Block 716264
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -185,10 +185,7 @@ public:
 	vSeeds.emplace_back("67.211.212.43", false);
 	vSeeds.emplace_back("66.45.245.123", false);
 	vSeeds.emplace_back("216.158.228.212", false);	    
-        vSeeds.emplace_back("seed1.satonetwork.com", false);
-        vSeeds.emplace_back("seed2.satonetwork.com", false);
-        vSeeds.emplace_back("seed3.satonetwork.com", false);
-
+        
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
