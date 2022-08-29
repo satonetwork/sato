@@ -5,7 +5,7 @@ Setup
 ---------------------
 Sato Core is the original Sato client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Sato transactions; depending on the speed of your computer and network connection, the synchronization process is typically complete in under an hour.
 
-To download compiled binaries of the Sato Core and wallet, visit the [GitHub release page](https://github.com/Satoex/Sato/releases).
+To download compiled binaries of the Sato Core and wallet, visit the [GitHub release page](https://github.com/satoverse/sato/releases).
 
 Running
 ---------------------
