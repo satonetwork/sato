@@ -28,7 +28,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     CBlock genesis;
     genesis.nTime    = nTime;
     genesis.nBits    = nBits;
-    genesis.nNonce = nNonce;
+    genesis.nNonce   = nNonce;
     genesis.nVersion = nVersion;
     genesis.vtx.push_back(MakeTransactionRef(std::move(txNew)));
     genesis.hashPrevBlock.SetNull();
@@ -157,7 +157,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nOverrideMinerConfirmationWindow = 2000;
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x0005f2a603b424cc5bc34b98085dc8948795ac6d880997e74a5c14585d9d0771"); // Block 716264
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000003ec828344d3ee5"); // Block 716367
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x000000046b69bd1e047935275bdd29f7ce38cdb4fdb37bff65a1153645217b93"); // Block 716367
@@ -181,8 +181,10 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x00000018419cc48e14c5a8909e0599d4d7189439ae5a16cffb31df833f2ee0b2"));
         assert(genesis.hashMerkleRoot == uint256S("0x0b22541da6ad305c4b575f99aedff3d94a049c97bbbaabc278cfa0f9e11e8488"));
 
-        vSeeds.emplace_back("node1.satoverse.io", false); 
-        
+        vSeeds.emplace_back("node1.satoverse.io", false);
+	vSeeds.emplace_back("85.214.105.24", false);
+	vSeeds.emplace_back("85.214.247.2", false);
+
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
@@ -201,7 +203,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                 { 0, uint256S("0x00000018419cc48e14c5a8909e0599d4d7189439ae5a16cffb31df833f2ee0b2")},
+		    {      0, uint256S("0x00000018419cc48e14c5a8909e0599d4d7189439ae5a16cffb31df833f2ee0b2")},
 		    {  56565, uint256S("0x000000002362279aca6f0a6e4495f406ed00f638f5318ed9fae3adb37b5751ba")},
 		    {  67786, uint256S("0x00000000008be3df3379c4a463b88479bd90b02e513cf12619f24e00df2c8be6")},
 		    { 145050, uint256S("0x000000000f1ca008c002e6a39767e5f3f1f469883bebe23df33bb211ed271b51")},
@@ -212,9 +214,11 @@ public:
 		    { 261718, uint256S("0x0000000010d94df6cc5b75392fd52c122bd517a909186ded74a39a8493c593d0")},
 		    { 312950, uint256S("0x000000001478105700a19faf70f3d297b1b74bdf8d021c4632b0aa2e5aa22f48")},
 		    { 466628, uint256S("0x00000000024bf31bf100d16bcbbf03ada93e47274d4e2f1a2d60e0aa03a95728")},
-		    { 481750, uint256S("0x000000007c0e4f7232245ee92fb99a73be5266361dedb53f5759cb7ad99f8923")},	    
-		    { 546259, uint256S("0x00000000a18306460fdf4edb9dd7e0cacc31eb68864014e1409b77ea1566dda5")},	
-		    { 716258, uint256S("0x00000000121ab54a292453a94e109addd305d300d3a71222c1c8ead430df6f5d")},	    
+		    { 481750, uint256S("0x000000007c0e4f7232245ee92fb99a73be5266361dedb53f5759cb7ad99f8923")},
+		    { 546259, uint256S("0x00000000a18306460fdf4edb9dd7e0cacc31eb68864014e1409b77ea1566dda5")},
+		    { 716172, uint256S("0x000000000df6671ea487ce90e2e59c5f81d633cfc84a83173a6300e3585055c9")},
+		    { 716258, uint256S("0x00000000121ab54a292453a94e109addd305d300d3a71222c1c8ead430df6f5d")},
+		    { 716367, uint256S("0x000000046b69bd1e047935275bdd29f7ce38cdb4fdb37bff65a1153645217b93")},
 		    
             }
         };
