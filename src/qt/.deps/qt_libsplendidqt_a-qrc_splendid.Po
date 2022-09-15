@@ -1,4 +1,0 @@
-qt/qt_libsatoqt_a-qrc_sato.o: qt/qrc_sato.cpp \
- /usr/include/stdc-predef.h
-
-/usr/include/stdc-predef.h:
