@@ -627,8 +627,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/SatoProject/Sato>";
-    const std::string URL_WEBSITE = "<https://sato.org>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/satoverse/sato>";
+    const std::string URL_WEBSITE = "<https://www.satoverse.io>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2009, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
