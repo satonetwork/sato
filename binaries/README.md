@@ -1,3 +1,3 @@
 Releases have been moved to:
 
-https://github.com/SatoProject/Sato/releases/latest
+https://github.com/satoverse/sato/releases

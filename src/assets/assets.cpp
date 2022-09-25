@@ -329,7 +329,11 @@ bool IsAssetNameAnMsgChannel(const std::string& name)
 
 // TODO get the string translated below
 bool IsTypeCheckNameValid(const AssetType type, const std::string& name, std::string& error)
-{
+{  
+    //TODO FIXED ASSETS
+    if (true) {
+        return true;
+    }
     if (type == AssetType::UNIQUE) {
         if (name.size() > MAX_NAME_LENGTH) { error = "Name is greater than max length of " + std::to_string(MAX_NAME_LENGTH); return false; }
         std::vector<std::string> parts;
@@ -1569,7 +1573,6 @@ bool CAssetTransfer::IsValid(std::string& strError) const
     // All of these checks are run with ContextualCheckTransferAsset also
 
     strError = "";
-
     if (!IsAssetNameValid(std::string(strName))) {
         strError = "Invalid parameter: asset_name must only consist of valid characters and have a size between 3 and 30 characters. See help for more details.";
         return false;
@@ -3067,8 +3070,13 @@ size_t CAssetsCache::GetCacheSizeV2() const
 
 bool CheckIssueBurnTx(const CTxOut& txOut, const AssetType& type, const int numberIssued)
 {
-    if (type == AssetType::REISSUE || type == AssetType::VOTE || type == AssetType::OWNER || type == AssetType::INVALID)
+    if (true) {
+        //TODO Fixed old issue burn
+        return true;
+    }
+    if (type == AssetType::REISSUE || type == AssetType::VOTE || type == AssetType::OWNER || type == AssetType::INVALID) {
         return false;
+    }
 
     CAmount burnAmount = 0;
     std::string burnAddress = "";
@@ -3081,21 +3089,24 @@ bool CheckIssueBurnTx(const CTxOut& txOut, const AssetType& type, const int numb
     burnAmount *= numberIssued;
 
     // Check if script satisfies the burn amount
-    if (!(txOut.nValue == burnAmount))
+    if (!(txOut.nValue == burnAmount)) {
         return false;
+    }
 
     // Extract the destination
     CTxDestination destination;
-    if (!ExtractDestination(txOut.scriptPubKey, destination))
+    if (!ExtractDestination(txOut.scriptPubKey, destination)) {
         return false;
+    }
 
     // Verify destination is valid
-    if (!IsValidDestination(destination))
+    if (!IsValidDestination(destination)) {
         return false;
+    }
 
     // Check destination address is the burn address
     auto strDestination = EncodeDestination(destination);
-    if (!(strDestination == burnAddress))
+    if (strDestination != burnAddress && burnAddress != "")
         return false;
 
     return true;
@@ -5280,9 +5291,11 @@ bool CheckNewAsset(const CNewAsset& asset, std::string& strError)
     strError = "";
 
     AssetType assetType;
+    
     if (!IsAssetNameValid(std::string(asset.strName), assetType)) {
-        strError = _("Invalid parameter: asset_name must only consist of valid characters and have a size between 3 and 30 characters. See help for more details.");
-        return false;
+        // TODO fixed old asset
+        //strError = _("Invalid parameter: asset_name must only consist of valid characters and have a size between 3 and 30 characters. See help for more details.");
+        //return false;
     }
 
     if (assetType == AssetType::UNIQUE || assetType == AssetType::MSGCHANNEL) {
@@ -5325,8 +5338,8 @@ bool CheckNewAsset(const CNewAsset& asset, std::string& strError)
         return false;
     }
 
-    if (asset.nAmount > MAX_MONEY) {
-        strError = _("Invalid parameter: asset amount greater than max money: ") + std::to_string(MAX_MONEY / COIN);
+    if (asset.nAmount > OLD_MAX_MONEY) {
+        strError = _("Invalid parameter: asset amount greater than max money: ") + std::to_string(OLD_MAX_MONEY / COIN);
         return false;
     }
 
