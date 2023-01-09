@@ -126,7 +126,7 @@ _Adjust to own needs. This will install the binaries to `/usr/local/bin`_
 
 `make -j8`  # 8 for 8 build threads, adjust to fit your setup.
 
-You can now start raven-qt from the build directory.
+You can now start sato-qt from the build directory.
 
 `sato/qt/sato-qt`
 
